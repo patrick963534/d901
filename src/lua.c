@@ -99,7 +99,7 @@ static void manual_input (int prompt) {
       printf("%s", lua_getstring(lua_getglobal("_PROMPT")));
     for(;;) {
       int c = getchar();
-      if (c == EOF) {
+      if (c == EOF) { /* Send by shortcut key Ctrl+D. */
         cont = 0;
         break;
       }
